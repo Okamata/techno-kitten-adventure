@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{54E046AE-5404-4460-8167-C006759A8581}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>Helicopter</AssemblyName>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <RootNamespace>Helicopter</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Game1.cs" />
+    <Compile Include="src\TunnelEffects.cs" />
+    <Compile Include="src\AnimatedSpriteA.cs" />
+    <Compile Include="src\Dancer.cs" />
+    <Compile Include="src\Equalizer.cs" />
+    <Compile Include="src\TunnelEffect.cs" />
+    <Compile Include="src\GameState.cs" />
+    <Compile Include="src\Global.cs" />
+    <Compile Include="src\ShineEffectManager.cs" />
+    <Compile Include="src\BRainbow.cs" />
+    <Compile Include="src\ScoreSystem.cs" />
+    <Compile Include="src\StorageDeviceSelectorEventResponse.cs" />
+    <Compile Include="src\StorageDeviceEventArgs.cs" />
+    <Compile Include="src\StorageDevicePromptEventArgs.cs" />
+    <Compile Include="src\StorageDeviceManager.cs" />
+    <Compile Include="src\Menu.cs" />
+    <Compile Include="src\MainMenu.cs" />
+    <Compile Include="src\MeatToMouth.cs" />
+    <Compile Include="src\FluctuationManager.cs" />
+    <Compile Include="src\SongManager.cs" />
+    <Compile Include="src\CatSelectMenu.cs" />
+    <Compile Include="src\FlashManager.cs" />
+    <Compile Include="src\TexDirection.cs" />
+    <Compile Include="src\BackgroundElement.cs" />
+    <Compile Include="src\KaraokeLyrics.cs" />
+    <Compile Include="src\PauseMenu.cs" />
+    <Compile Include="src\OptionsMenu.cs" />
+    <Compile Include="src\LeaderboardsMenu.cs" />
+    <Compile Include="src\Explosion.cs" />
+    <Compile Include="src\StaticBackgroundElement.cs" />
+    <Compile Include="src\BSpriteManager.cs" />
+    <Compile Include="src\ScoreInfo.cs" />
+    <Compile Include="src\Helicopter.cs" />
+    <Compile Include="src\OpeningMenu.cs" />
+    <Compile Include="src\MenuItem.cs" />
+    <Compile Include="src\Camera.cs" />
+    <Compile Include="src\Vine.cs" />
+    <Compile Include="src\AnimatedSprite.cs" />
+    <Compile Include="src\Program.cs" />
+    <Compile Include="src\ButterflyParticle.cs" />
+    <Compile Include="src\Foot.cs" />
+    <Compile Include="src\TunnelParticle.cs" />
+    <Compile Include="src\ParticleEmitter.cs" />
+    <Compile Include="src\TrialMenu.cs" />
+    <Compile Include="src\Light.cs" />
+    <Compile Include="src\PositionBehavior.cs" />
+    <Compile Include="src\BackgroundSpriteA.cs" />
+    <Compile Include="src\StageSelectMenu.cs" />
+    <Compile Include="src\Animation.cs" />
+    <Compile Include="src\Tunnel.cs" />
+    <Compile Include="src\ParticleSystem.cs" />
+    <Compile Include="src\StarEffect.cs" />
+    <Compile Include="src\PirateBoat.cs" />
+    <Compile Include="src\InputState.cs" />
+    <Compile Include="src\DancerManager.cs" />
+    <Compile Include="src\LyricEffect.cs" />
+    <Compile Include="src\HeartsManager.cs" />
+    <Compile Include="src\Background.cs" />
+    <Compile Include="src\BigRainbow.cs" />
+    <Compile Include="src\Rainbow.cs" />
+    <Compile Include="src\Fireworks.cs" />
+    <Compile Include="src\Hand.cs" />
+    <Compile Include="src\SpreadLaser.cs" />
+    <Compile Include="src\Laser.cs" />
+    <Compile Include="src\Eyes.cs" />
+    <Compile Include="src\ButterflyEffect.cs" />
+    <Compile Include="src\CreditsMenu.cs" />
+    <Compile Include="src\RainbowTrail.cs" />
+    <Compile Include="src\Particle.cs" />
+    <Compile Include="src\ItemSelectedParticle.cs" />
+    <Compile Include="src\ItemSelectedEffect.cs" />
+    <Compile Include="src\Heart.cs" />
+    <Compile Include="src\SausageRainbow.cs" />
+    <Compile Include="src\FireworkEffect.cs" />
+    <Compile Include="src\ShineEffect.cs" />
+    <Compile Include="src\ExplosionManager.cs" />
+    <Compile Include="src\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FNA\FNA.csproj">
+      <Project>{35253ce1-c864-4cd3-8249-4d1319748e8f}</Project>
+      <Name>FNA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
