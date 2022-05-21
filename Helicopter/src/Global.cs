@@ -176,10 +176,10 @@ namespace Helicopter
         public static bool CanBuyGame()
         {
             return true;
-            if (!Global.playerIndex.HasValue)
-                return false;
-            SignedInGamer signedInGamer = Gamer.SignedInGamers[Global.playerIndex.Value];
-            return signedInGamer != null && signedInGamer.IsSignedInToLive && !Guide.IsVisible && signedInGamer.Privileges.AllowPurchaseContent;
+            //if (!Global.playerIndex.HasValue)
+            //    return false;
+            //SignedInGamer signedInGamer = Gamer.SignedInGamers[Global.playerIndex.Value];
+            //return signedInGamer != null && signedInGamer.IsSignedInToLive && !Guide.IsVisible && signedInGamer.Privileges.AllowPurchaseContent;
         }
 
         public static void SetVibrationPause()

@@ -1,11 +1,6 @@
-﻿
-
-
-
-
-
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Storage;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 
@@ -74,96 +69,96 @@ namespace Helicopter
 
         public override void Update(GameTime gameTime)
         {
-            if (this.Device != null && !this.Device.IsConnected && this.wasDeviceConnected)
-                this.FireDeviceDisconnectedEvent();
-            try
-            {
-                if (!Guide.IsVisible)
-                {
-                    if (this.showDeviceSelector)
-                    {
-                        this.showDeviceSelector = false;
-                        PlayerIndex? player = this.Player;
-                        if (player.HasValue)
-                        {
-                            player = this.Player;
-                            StorageDevice.BeginShowSelector(player.Value, this.RequiredBytes, 0, new AsyncCallback(this.deviceSelectorCallback), (object)null);
-                        }
-                        else
-                            StorageDevice.BeginShowSelector(this.RequiredBytes, 0, new AsyncCallback(this.deviceSelectorCallback), (object)null);
-                    }
-                    else if (this.promptToReSelectDevice)
-                    {
-                        if (this.Player.HasValue)
-                            Guide.BeginShowMessageBox(this.Player.Value, "Reselect Storage Device?", "No storage device was selected. Would you like to re-select the storage device?", (IEnumerable<string>)new string[2]
-                            {
-                "Yes. Select new device.",
-                "No. Continue without device."
-                            }, 0, MessageBoxIcon.None, new AsyncCallback(this.reselectPromptCallback), (object)null);
-                        else
-                            Guide.BeginShowMessageBox("Reselect Storage Device?", "No storage device was selected. Would you like to re-select the storage device?", (IEnumerable<string>)new string[2]
-                            {
-                "Yes. Select new device.",
-                "No. Continue without device."
-                            }, 0, MessageBoxIcon.None, new AsyncCallback(this.reselectPromptCallback), (object)null);
-                    }
-                    else if (this.promptForDisconnect)
-                    {
-                        if (this.Player.HasValue)
-                            Guide.BeginShowMessageBox(this.Player.Value, "Storage Device Disconnected", "An active storage device has been disconnected. Would you like to select a new storage device?", (IEnumerable<string>)new string[2]
-                            {
-                "Yes. Select new device.",
-                "No. Continue without device."
-                            }, 0, MessageBoxIcon.None, new AsyncCallback(this.reselectPromptCallback), (object)null);
-                        else
-                            Guide.BeginShowMessageBox("Storage Device Disconnected", "An active storage device has been disconnected. Would you like to select a new storage device?", (IEnumerable<string>)new string[2]
-                            {
-                "Yes. Select new device.",
-                "No. Continue without device."
-                            }, 0, MessageBoxIcon.None, new AsyncCallback(this.reselectPromptCallback), (object)null);
-                    }
-                    else if (this.promptToForceReselect)
-                    {
-                        if (this.Player.HasValue)
-                            Guide.BeginShowMessageBox(this.Player.Value, "Reselect Storage Device", "No storage device was selected. A storage device is required to continue. Select Ok to choose a storage device.", (IEnumerable<string>)new string[1]
-                            {
-                "Ok"
-                            }, 0, MessageBoxIcon.None, new AsyncCallback(this.forcePromptCallback), (object)null);
-                        else
-                            Guide.BeginShowMessageBox("Reselect Storage Device", "No storage device was selected. A storage device is required to continue. Select Ok to choose a storage device.", (IEnumerable<string>)new string[1]
-                            {
-                "Ok"
-                            }, 0, MessageBoxIcon.None, new AsyncCallback(this.forcePromptCallback), (object)null);
-                    }
-                    else if (this.promptForDisconnectForced)
-                    {
-                        if (this.Player.HasValue)
-                            Guide.BeginShowMessageBox(this.Player.Value, "Storage Device Disconnected", "An active storage device has been disconnected. A storage device is required to continue. Select Ok to choose a storage device.", (IEnumerable<string>)new string[1]
-                            {
-                "Ok"
-                            }, 0, MessageBoxIcon.None, new AsyncCallback(this.forcePromptCallback), (object)null);
-                        else
-                            Guide.BeginShowMessageBox("Storage Device Disconnected", "An active storage device has been disconnected. A storage device is required to continue. Select Ok to choose a storage device.", (IEnumerable<string>)new string[1]
-                            {
-                "Ok"
-                            }, 0, MessageBoxIcon.None, new AsyncCallback(this.forcePromptCallback), (object)null);
-                    }
-                }
-            }
-            catch (GamerServicesNotAvailableException ex)
-            {
-            }
-            catch (GuideAlreadyVisibleException ex)
-            {
-            }
-            this.wasDeviceConnected = this.Device != null && this.Device.IsConnected;
+            //if (this.Device != null && !this.Device.IsConnected && this.wasDeviceConnected)
+            //    this.FireDeviceDisconnectedEvent();
+            //try
+            //{
+            //    if (!Guide.IsVisible)
+            //    {
+            //        if (this.showDeviceSelector)
+            //        {
+            //            this.showDeviceSelector = false;
+            //            PlayerIndex? player = this.Player;
+            //            if (player.HasValue)
+            //            {
+            //                player = this.Player;
+            //                StorageDevice.BeginShowSelector(player.Value, this.RequiredBytes, 0, new AsyncCallback(this.deviceSelectorCallback), (object)null);
+            //            }
+            //            else
+            //                StorageDevice.BeginShowSelector(this.RequiredBytes, 0, new AsyncCallback(this.deviceSelectorCallback), (object)null);
+            //        }
+            //        else if (this.promptToReSelectDevice)
+            //        {
+            //            if (this.Player.HasValue)
+            //                Guide.BeginShowMessageBox(this.Player.Value, "Reselect Storage Device?", "No storage device was selected. Would you like to re-select the storage device?", (IEnumerable<string>)new string[2]
+            //                {
+            //    "Yes. Select new device.",
+            //    "No. Continue without device."
+            //                }, 0, MessageBoxIcon.None, new AsyncCallback(this.reselectPromptCallback), (object)null);
+            //            else
+            //                Guide.BeginShowMessageBox("Reselect Storage Device?", "No storage device was selected. Would you like to re-select the storage device?", (IEnumerable<string>)new string[2]
+            //                {
+            //    "Yes. Select new device.",
+            //    "No. Continue without device."
+            //                }, 0, MessageBoxIcon.None, new AsyncCallback(this.reselectPromptCallback), (object)null);
+            //        }
+            //        else if (this.promptForDisconnect)
+            //        {
+            //            if (this.Player.HasValue)
+            //                Guide.BeginShowMessageBox(this.Player.Value, "Storage Device Disconnected", "An active storage device has been disconnected. Would you like to select a new storage device?", (IEnumerable<string>)new string[2]
+            //                {
+            //    "Yes. Select new device.",
+            //    "No. Continue without device."
+            //                }, 0, MessageBoxIcon.None, new AsyncCallback(this.reselectPromptCallback), (object)null);
+            //            else
+            //                Guide.BeginShowMessageBox("Storage Device Disconnected", "An active storage device has been disconnected. Would you like to select a new storage device?", (IEnumerable<string>)new string[2]
+            //                {
+            //    "Yes. Select new device.",
+            //    "No. Continue without device."
+            //                }, 0, MessageBoxIcon.None, new AsyncCallback(this.reselectPromptCallback), (object)null);
+            //        }
+            //        else if (this.promptToForceReselect)
+            //        {
+            //            if (this.Player.HasValue)
+            //                Guide.BeginShowMessageBox(this.Player.Value, "Reselect Storage Device", "No storage device was selected. A storage device is required to continue. Select Ok to choose a storage device.", (IEnumerable<string>)new string[1]
+            //                {
+            //    "Ok"
+            //                }, 0, MessageBoxIcon.None, new AsyncCallback(this.forcePromptCallback), (object)null);
+            //            else
+            //                Guide.BeginShowMessageBox("Reselect Storage Device", "No storage device was selected. A storage device is required to continue. Select Ok to choose a storage device.", (IEnumerable<string>)new string[1]
+            //                {
+            //    "Ok"
+            //                }, 0, MessageBoxIcon.None, new AsyncCallback(this.forcePromptCallback), (object)null);
+            //        }
+            //        else if (this.promptForDisconnectForced)
+            //        {
+            //            if (this.Player.HasValue)
+            //                Guide.BeginShowMessageBox(this.Player.Value, "Storage Device Disconnected", "An active storage device has been disconnected. A storage device is required to continue. Select Ok to choose a storage device.", (IEnumerable<string>)new string[1]
+            //                {
+            //    "Ok"
+            //                }, 0, MessageBoxIcon.None, new AsyncCallback(this.forcePromptCallback), (object)null);
+            //            else
+            //                Guide.BeginShowMessageBox("Storage Device Disconnected", "An active storage device has been disconnected. A storage device is required to continue. Select Ok to choose a storage device.", (IEnumerable<string>)new string[1]
+            //                {
+            //    "Ok"
+            //                }, 0, MessageBoxIcon.None, new AsyncCallback(this.forcePromptCallback), (object)null);
+            //        }
+            //    }
+            //}
+            //catch (GamerServicesNotAvailableException ex)
+            //{
+            //}
+            //catch (GuideAlreadyVisibleException ex)
+            //{
+            //}
+            //this.wasDeviceConnected = this.Device != null && this.Device.IsConnected;
         }
 
         private void forcePromptCallback(IAsyncResult ar)
         {
             this.promptToForceReselect = false;
             this.promptForDisconnectForced = false;
-            Guide.EndShowMessageBox(ar);
+            //Guide.EndShowMessageBox(ar);
             this.showDeviceSelector = true;
         }
 
@@ -171,8 +166,8 @@ namespace Helicopter
         {
             this.promptForDisconnect = false;
             this.promptToReSelectDevice = false;
-            int? nullable = Guide.EndShowMessageBox(ar);
-            this.showDeviceSelector = nullable.HasValue && nullable.Value == 0;
+            //int? nullable = Guide.EndShowMessageBox(ar);
+            //this.showDeviceSelector = nullable.HasValue && nullable.Value == 0;
             this.promptEventArgs.PromptForDevice = this.showDeviceSelector;
             if (this.DevicePromptClosed == null)
                 return;

@@ -131,11 +131,11 @@ namespace Helicopter
                 case 3:
                     if (this.canBuyGame)
                     {
-                        if (Global.IsTrialMode && Global.CanBuyGame())
-                        {
-                            Guide.ShowMarketplace(Global.playerIndex.Value);
-                            break;
-                        }
+                        //if (Global.IsTrialMode && Global.CanBuyGame())
+                        //{
+                        //    Guide.ShowMarketplace(Global.playerIndex.Value);
+                        //    break;
+                        //}
                         break;
                     }
                     gameState = GameState.EXIT;

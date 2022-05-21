@@ -111,7 +111,7 @@ namespace Helicopter
         {
             Global.DeviceManager = new StorageDeviceManager((Game)this);
             this.Components.Add((IGameComponent)Global.DeviceManager);
-            this.Components.Add((IGameComponent)new GamerServicesComponent((Game)this));
+            //this.Components.Add((IGameComponent)new GamerServicesComponent((Game)this));
             Global.DeviceManager.DeviceSelectorCanceled += new EventHandler<StorageDeviceEventArgs>(this.DeviceSelectorCanceled);
             Global.DeviceManager.DeviceDisconnected += new EventHandler<StorageDeviceEventArgs>(this.DeviceDisconnected);
             Global.DeviceManager.PromptForDevice();
@@ -166,7 +166,7 @@ namespace Helicopter
         {
             float totalSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
             float totalMilliseconds = (float)MediaPlayer.PlayPosition.TotalMilliseconds;
-            Global.IsTrialMode = Guide.IsTrialMode;
+            //Global.IsTrialMode = Guide.IsTrialMode;
             this.currInput.Update();
             if (this.currInput.IsButtonUp(Buttons.A))
                 this.justStarted = false;

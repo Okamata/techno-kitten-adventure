@@ -56,11 +56,11 @@ namespace Helicopter
                 case 5:
                     if (this.canBuyGame)
                     {
-                        if (Global.IsTrialMode && Global.CanBuyGame())
-                        {
-                            Guide.ShowMarketplace(Global.playerIndex.Value);
-                            break;
-                        }
+                        //if (Global.IsTrialMode && Global.CanBuyGame())
+                        //{
+                        //    Guide.ShowMarketplace(Global.playerIndex.Value);
+                        //    break;
+                        //}
                         break;
                     }
                     this.index_ = 0;
